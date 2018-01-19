@@ -1,0 +1,10 @@
+the total for group 0 is 10.000000
+the total for group 1 is 10.000000
+the total for group 2 is 10.000000
+the total for group 3 is 10.000000
+the total for group 4 is 10.000000
+the total for group 5 is 10.000000
+the total for group 6 is 10.000000
+the total for group 7 is 10.000000
+the total for group 8 is 10.000000
+the total for group 9 is 10.000000
