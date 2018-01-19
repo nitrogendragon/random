@@ -1,4 +1,5 @@
-include <stdio.h>
+
+file:///home/corey/project1/html/random_8c.htmlinclude <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>

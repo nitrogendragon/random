@@ -1,13 +1,16 @@
+/*! main function that runs all the other functions to create the rng\
+uses randavg.c to get th average of the random numbers\
+uses tofile.c to send the random numbers produced to the new text file defined as randomnums.txt\
+uses seedgenerator.c to generate the seed for the lcg from system time(computer clock)\
+uses hist.c to collect the data into an array and then change those numbers and\
+put into another array to show data distribution which is appened to randomnums.txt
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include "random.h"
 
-#include "randavg.h"
-#include "tofile.h"
-#include "seedgenerator.h"
-#include "lcg.h"
-#include "hist.h"
 
 //m is the modulus
 //a is the multiplier
@@ -15,19 +18,16 @@
 //Xn = (aXn-1 + c) mod m
 // m must be a prime somewhat larger than the range i want
 
-/** main function that runs all the other functions to create the rng
-uses randavg.c to get th average of the random numbers
-uses tofile.c to send the random numbers produced to the new text file defined as randomnums.txt
-uses seedgenerator.c to generate the seed for the lcg from system time(computer clock)
-uses hist.c to collect the data into an array and then change those numbers and\
-put into another array to show data distribution which is appened to randomnums.txt
-*/
+
 int main(void)//main function
 {
 	FILE *randfile;//file pointer
 	
 	double totalsarray[10];//array used for counting how many values fall into certain ranges.. used in hist.c
-	
+	for(int z =0; z<10; z++){
+		totalsarray[z] = 0;
+			printf("%f\n", totalsarray[z]);
+	}
 	time_t crntx;// the current value of x
 	int amult = 3;// what a is in the formula/ the multipler value
 	int inc = 3;// the increment
@@ -83,5 +83,5 @@ int main(void)//main function
 		printf("this could be bad, not very random or well distributed\n");	
 	}
 		return 0;
-	fclose(randfile);//closes randfile(randomnums.txt will not be editable anymore
+	fclose(randfile);//closes randfile(randomnums.txt) will not be editable anymore
 }

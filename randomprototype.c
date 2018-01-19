@@ -7,6 +7,9 @@
 //c is the increment
 //Xn = (aXn-1 + c) mod m
 // m must be a prime somewhat larger than the range i want
+/**
+this is the original version with all functions built in. it works perfectly while the seperated version does not.
+*/
 
 int histogram(double* gennumarray,double* totalsarray, int repeat, FILE *randfile){
 	int i;

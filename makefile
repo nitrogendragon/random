@@ -1,6 +1,5 @@
 random: random.o tofile.o seedgenerator.o lcg.o hist.o randavg.o
-	gcc random.o \
-    hist.o lcg.o randavg.o tofile.o -lm -o random
+	gcc random.o  tofile.o seedgenerator.o lcg.o hist.o randavg.o -lm -o random
 
 random.o: random.c
 	gcc random.c -c
